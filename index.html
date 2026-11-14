@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1220" />
+    <title>Cesium ion · JFK test</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="JFK map test home">
+          <span class="brand-mark" aria-hidden="true">C</span>
+          <span>Cesium ion <span class="brand-divider">/</span> JFK test</span>
+        </a>
+        <div class="header-state" aria-live="polite">
+          <span id="status-dot" class="status-dot" data-state="connecting"></span>
+          <span id="status" role="status">Connecting</span>
+        </div>
+      </header>
+
+      <main class="map-shell">
+        <div id="cesium-container" aria-label="3D map centered on JFK Airport"></div>
+        <section class="map-overlay" aria-label="Map controls and location">
+          <div class="location-card">
+            <div class="location-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"/><circle cx="12" cy="9" r="2.4"/></svg>
+            </div>
+            <div>
+              <p class="location-label">LOCATION</p>
+              <h1>John F. Kennedy International</h1>
+              <p class="coordinates">40.6413° N <span>·</span> 73.7781° W</p>
+            </div>
+          </div>
+          <button id="reset-jfk" class="reset-button" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11a9 9 0 1 1 2.64 6.36M3 4v7h7"/></svg>
+            Reset to JFK
+          </button>
+        </section>
+        <div id="error-note" class="error-note" role="alert" hidden></div>
+        <footer class="map-footer">
+          <span>CesiumJS · ion terrain test</span>
+          <span>Terrain and buildings are for visualization only</span>
+        </footer>
+      </main>
+    </div>
+    <script>window.CESIUM_BASE_URL = "/Cesium/";</script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

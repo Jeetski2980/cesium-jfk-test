@@ -1,0 +1,8 @@
+node_modules/
+dist/
+public/Cesium/
+.env.local
+.env.*.local
+.DS_Store
+**/.DS_Store
+CODEX_HANDOFF*.md
